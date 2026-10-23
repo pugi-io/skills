@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Templates"
+  short_description: "Start a project from one of Pugi's 31 starters"
+  brand_color: "#3DA9FC"
+  default_prompt: "Help me pick a Pugi template and start a project from it."
+policy:
+  allow_implicit_invocation: false

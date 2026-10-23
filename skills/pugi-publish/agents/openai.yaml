@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Publish"
+  short_description: "Publish a site to *.pugi.app and connect your domain"
+  brand_color: "#3DA9FC"
+  default_prompt: "Publish this project with Pugi and give me the live URL."
+policy:
+  allow_implicit_invocation: false

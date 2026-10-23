@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Build"
+  short_description: "Brief Pugi to plan, build and test an app"
+  brand_color: "#3DA9FC"
+  default_prompt: "Write a brief and have Pugi build this app."
+policy:
+  allow_implicit_invocation: false

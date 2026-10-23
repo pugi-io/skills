@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Security Check"
+  short_description: "Find leaked keys and missing headers before launch"
+  brand_color: "#3DA9FC"
+  default_prompt: "Run a Pugi security check on this project before we launch."
+policy:
+  allow_implicit_invocation: true

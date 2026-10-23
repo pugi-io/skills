@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Fix Security"
+  short_description: "Let Pugi fix the findings of a security check"
+  brand_color: "#3DA9FC"
+  default_prompt: "Have Pugi fix the security findings on my project."
+policy:
+  allow_implicit_invocation: false

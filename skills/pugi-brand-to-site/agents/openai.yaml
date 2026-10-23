@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Brand to Site"
+  short_description: "Turn a logo.pugi.io brand into a website"
+  brand_color: "#3DA9FC"
+  default_prompt: "Build a website in my logo.pugi.io brand."
+policy:
+  allow_implicit_invocation: false

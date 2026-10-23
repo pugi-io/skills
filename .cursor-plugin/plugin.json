@@ -1,0 +1,25 @@
+{
+  "name": "pugi",
+  "version": "0.1.0",
+  "description": "Brief Pugi to build and deliver an app, design it, start from a template, make a logo and a site in that brand, check and fix security, and publish to *.pugi.app.",
+  "author": {
+    "name": "Pugi Inc.",
+    "email": "support@pugi.io"
+  },
+  "homepage": "https://pugi.io",
+  "repository": "https://github.com/pugi-io/skills",
+  "license": "MIT",
+  "keywords": [
+    "pugi",
+    "app-builder",
+    "sdlc",
+    "publish",
+    "hosting",
+    "security",
+    "design",
+    "templates",
+    "logo",
+    "brand-kit"
+  ],
+  "logo": "./assets/icon.png"
+}

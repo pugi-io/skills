@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Design"
+  short_description: "Draw and change your app's design, then apply it"
+  brand_color: "#3DA9FC"
+  default_prompt: "Open my Pugi project in Design mode and help me change the design."
+policy:
+  allow_implicit_invocation: false

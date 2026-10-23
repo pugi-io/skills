@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pugi",
+  "version": "0.1.0",
+  "description": "Brief Pugi to build and deliver an app, design it, start from a template, make a logo and a site in that brand, check and fix security, and publish to *.pugi.app.",
+  "author": {
+    "name": "Pugi Inc.",
+    "email": "support@pugi.io",
+    "url": "https://pugi.io"
+  },
+  "homepage": "https://pugi.io",
+  "repository": "https://github.com/pugi-io/skills",
+  "license": "MIT",
+  "keywords": [
+    "pugi",
+    "app-builder",
+    "sdlc",
+    "publish",
+    "hosting",
+    "security",
+    "design",
+    "templates",
+    "logo",
+    "brand-kit"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Pugi",
+        "shortDescription": "Build, design, secure and publish apps with Pugi",
+        "longDescription": "Brief Pugi to build and deliver an app, design it, start from a template, make a logo and a site in that brand, check and fix security, and publish to *.pugi.app.",
+        "developerName": "Pugi Inc.",
+        "websiteURL": "https://pugi.io",
+        "category": "Productivity",
+        "brandColor": "#3DA9FC",
+        "logo": "./assets/icon.png",
+        "defaultPrompt": "Check my site with Pugi before launch."
+      }
+    }
+  }
+}

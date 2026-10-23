@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Logo"
+  short_description: "Logos and a brand kit for a business"
+  brand_color: "#3DA9FC"
+  default_prompt: "Make a logo and brand kit for my business with Pugi."
+policy:
+  allow_implicit_invocation: true

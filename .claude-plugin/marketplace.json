@@ -1,0 +1,24 @@
+{
+  "name": "pugi",
+  "description": "Pugi skills: build, deliver, design, templates, brand, security, publish.",
+  "owner": {
+    "name": "Pugi Inc.",
+    "email": "support@pugi.io",
+    "url": "https://pugi.io"
+  },
+  "plugins": [
+    {
+      "name": "pugi",
+      "source": "./",
+      "description": "Brief Pugi to build and deliver an app, design it, start from a template, make a logo and a site in that brand, check and fix security, and publish to *.pugi.app.",
+      "category": "deployment",
+      "tags": [
+        "app-builder",
+        "publish",
+        "security",
+        "design",
+        "logo"
+      ]
+    }
+  ]
+}

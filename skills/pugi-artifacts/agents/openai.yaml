@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Documents"
+  short_description: "BRD, PRD, spec and test plan for your app"
+  brand_color: "#3DA9FC"
+  default_prompt: "Have Pugi write the PRD, spec and test plan for this app."
+policy:
+  allow_implicit_invocation: false

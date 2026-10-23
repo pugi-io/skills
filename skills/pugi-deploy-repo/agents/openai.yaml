@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Deploy Repo"
+  short_description: "Import a GitHub repo into Pugi and publish it"
+  brand_color: "#3DA9FC"
+  default_prompt: "Import this GitHub repo into Pugi and get it live on pugi.app."
+policy:
+  allow_implicit_invocation: false

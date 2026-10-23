@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Delivery Run"
+  short_description: "Steer a Pugi run through plan, build, tests, preview and launch"
+  brand_color: "#3DA9FC"
+  default_prompt: "Check my Pugi run and take it through the next gate with me."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,11 @@
+{
+  "name": "pugi",
+  "plugins": [
+    {
+      "name": "pugi",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}
