@@ -1,6 +1,6 @@
 ---
 name: pugi-build
-description: Write a good brief and start a Pugi build of a web app or website from it - the quick path from an idea to a running Pugi project, stopping at the plan for the user's approval. Use when the user wants Pugi to build an app or site, or to turn an idea into a working app. For steering the whole run through its gates to going live, use pugi-sdlc.
+description: Write a good brief and start a Pugi build of a web app or website from it. This is the quick path from an idea to a running Pugi project, stopping at the plan for the user's approval. Use when the user wants Pugi to build an app or site, or to turn an idea into a working app. For steering the whole run through its gates to going live, use pugi-sdlc.
 license: MIT (see LICENSE.txt)
 compatibility: Needs @pugi/cli 1.0.0-alpha.246 or later, Node.js 18+, network access and a Pugi account (the user approves the sign-in in a browser). Builds use the user's Pugi plan and credits.
 metadata:
@@ -19,7 +19,7 @@ metadata:
 | Read the plan, approve it, follow the run | `pugi artifacts`, `pugi sdlc` (see `pugi-sdlc`) | Available |
 | The same flow in a browser | https://app.pugi.io | Available |
 | A local starter to build on yourself | `pugi scaffold web` or `pugi scaffold fullstack` | Available |
-| More agent tools | — | Coming soon |
+| More agent tools | Not released yet | Coming soon |
 
 ## Rules
 

@@ -1,6 +1,6 @@
 ---
 name: pugi-deploy-repo
-description: Bring an existing app from a GitHub repository into Pugi and publish it to a live *.pugi.app address - good for apps built elsewhere (Lovable, Bolt, v0, or by hand). Covers the console's Import from GitHub, connecting GitHub for private repositories, setting the app's environment, and the CLI path (clone, then pugi publish). Use when the user wants to host, deploy or move an existing repo or AI-built app to Pugi.
+description: Bring an existing app from a GitHub repository into Pugi and publish it to a live *.pugi.app address. Good for apps built elsewhere (Lovable, Bolt, v0, or by hand). Covers the console's Import from GitHub, connecting GitHub for private repositories, setting the app's environment, and the CLI path (clone, then pugi publish). Use when the user wants to host, deploy or move an existing repo or AI-built app to Pugi.
 license: MIT (see LICENSE.txt)
 compatibility: Console import needs a browser and a Pugi account; private repositories need the Pugi GitHub App connected. The CLI path needs @pugi/cli 1.0.0-alpha.246 or later, Node.js 18+, git, and Python 3.8+ for the check.
 metadata:
@@ -19,8 +19,8 @@ metadata:
 | **Connect GitHub** for private repositories | Same dialog | Available |
 | Publish the imported project | **Publish** button in the project | Available. Publishing on a pugi.app address is included on every plan (https://pugi.io/pricing) |
 | Clone locally, then `pugi publish` | CLI `@pugi/cli` 1.0.0-alpha.246 or later (see `pugi-publish`) | Available |
-| Push changes back to GitHub as a pull request | — | Not available today |
-| More agent tools | — | Coming soon |
+| Push changes back to GitHub as a pull request | None today | Not available today |
+| More agent tools | Not released yet | Coming soon |
 
 ## Rules
 

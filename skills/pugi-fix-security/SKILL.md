@@ -1,6 +1,6 @@
 ---
 name: pugi-fix-security
-description: After a Pugi security check, have Pugi fix the findings - "Let Pugi fix all" on a project's security findings, or "Let Pugi fix it" after the free website check - then verify the fix with a new check before the app goes live. Use when the user has security findings (leaked keys, missing headers, vulnerable dependencies, risky code) on a Pugi project or on a site checked at pugi.io/security/audit and wants them fixed.
+description: After a Pugi security check, have Pugi fix the findings ("Let Pugi fix all" on a project's security findings, or "Let Pugi fix it" after the free website check), then verify the fix with a new check before the app goes live. Use when the user has security findings (leaked keys, missing headers, vulnerable dependencies, risky code) on a Pugi project or on a site checked at pugi.io/security/audit and wants them fixed.
 license: MIT (see LICENSE.txt)
 compatibility: A person or a browser-capable agent in the Pugi console (sign-in required). Fixes use the plan allowance.
 metadata:
@@ -17,8 +17,8 @@ metadata:
 |---|---|---|
 | **Let Pugi fix all (N)** and per-finding **Let Pugi fix it** | A project's Security tab at https://app.pugi.io | Available, every plan. Free has a daily number of checks |
 | **Let Pugi fix it** after the free website check | https://pugi.io/security/audit, then sign-up | Available |
-| Fixes delivered as a pull request on the user's GitHub repository | — | Not available today |
-| More agent tools | — | Coming soon |
+| Fixes delivered as a pull request on the user's GitHub repository | None today | Not available today |
+| More agent tools | Not released yet | Coming soon |
 
 Today the fixes are made in the Pugi project. They are not sent to GitHub as a pull request.
 

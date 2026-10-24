@@ -1,6 +1,6 @@
 ---
 name: pugi-start-from-template
-description: Start a new Pugi project from one of Pugi's 31 ready-made starters - landing pages, SaaS with sign-in and subscriptions, marketplaces, booking, online courses, events and tickets, menus with ordering, job boards, CRM, help desk, invoices, inventory, admin panels and more - or lay a starter down locally with the CLI. Use when the user wants to begin from a template, asks what kinds of apps Pugi can start from, or wants a known-good starter project.
+description: Start a new Pugi project from one of Pugi's 31 ready-made starters (landing pages, SaaS with sign-in and subscriptions, marketplaces, booking, online courses, events and tickets, menus with ordering, job boards, CRM, help desk, invoices, inventory, admin panels and more), or lay a starter down locally with the CLI. Use when the user wants to begin from a template, asks what kinds of apps Pugi can start from, or wants a known-good starter project.
 license: MIT (see LICENSE.txt)
 compatibility: The gallery is in the Pugi console at https://app.pugi.io (sign-in required). The local starters need Node.js 18+ and @pugi/cli 1.0.0-alpha.246 or later.
 metadata:
@@ -18,8 +18,8 @@ metadata:
 | Templates gallery, 31 starters, **Use this template** | https://app.pugi.io/templates (also Projects, then Templates, and New project, then Browse Templates) | Available, every plan, within the plan's project limit |
 | Ideas built on starters, **Build one like this** | https://pugi.io/ideas | Available |
 | Local starter: `pugi scaffold web`, `web-static`, `fullstack` | CLI `@pugi/cli` 1.0.0-alpha.246 or later | Available |
-| Any gallery starter by id from the CLI | — | Not in the published CLI (1.0.0-alpha.246) |
-| More agent tools | — | Coming soon |
+| Any gallery starter by id from the CLI | None today | Not in the published CLI (1.0.0-alpha.246) |
+| More agent tools | Not released yet | Coming soon |
 
 ## The 31 starters in the gallery
 

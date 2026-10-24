@@ -1,6 +1,6 @@
 ---
 name: pugi-sdlc
-description: Run Pugi's full delivery loop for an app and steer it through every gate - brief, written plan, the user's plan approval, build, automated tests and security scan, live preview, the user's preview approval, and going live - reading status as JSON at each step. Use when the user wants Pugi to deliver an app end to end, asks where a Pugi run is, or needs to approve, reject or retry a stage. For just starting a build from a brief, pugi-build is enough.
+description: Run Pugi's full delivery loop for an app and steer it through every gate (brief, written plan, the user's plan approval, build, automated tests and security scan, live preview, the user's preview approval, and going live), reading status as JSON at each step. Use when the user wants Pugi to deliver an app end to end, asks where a Pugi run is, or needs to approve, reject or retry a stage. For just starting a build from a brief, pugi-build is enough.
 license: MIT (see LICENSE.txt)
 compatibility: Needs @pugi/cli 1.0.0-alpha.246 or later, Node.js 18+, network access and a Pugi account (the user approves the sign-in in a browser). Runs use the user's Pugi plan and credits.
 metadata:
@@ -23,7 +23,7 @@ Use this skill for the whole run and its gates. `pugi-build` covers writing the 
 | Preview gate: approve (go live) or send back | `pugi sdlc approve`, `pugi sdlc reject` | Available |
 | Resume or retry | `pugi sdlc drive`, `pugi sdlc retry` | Available |
 | The same run with buttons | https://app.pugi.io | Available |
-| More agent tools | — | Coming soon |
+| More agent tools | Not released yet | Coming soon |
 
 ## Rules
 
@@ -46,7 +46,7 @@ Use this skill for the whole run and its gates. `pugi-build` covers writing the 
 | Repository and database | The code is saved to the project's repository and the database is set up, so the preview is a real working app | Automatic |
 | **Preview approval** | The run stops on a live preview. `state` is `PREVIEW_APPROVE` | **The user** |
 | Going live | The app is deployed, checked and its usage recorded | Automatic |
-| Done or failed | `state` is `DONE` or `FAILED` | — |
+| Done or failed | `state` is `DONE` or `FAILED` | Nobody: the run has ended |
 
 ## Steps
 

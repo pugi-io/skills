@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a vulnerability
+    url: https://github.com/pugi-io/skills/blob/main/SECURITY.md
+    about: Email security@pugi.io. Do not open a public issue.
+  - name: Account, plan or build questions
+    url: https://pugi.io/support
+    about: Support chat and email for your Pugi account.

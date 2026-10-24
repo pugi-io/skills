@@ -1,6 +1,6 @@
 ---
 name: pugi-artifacts
-description: Have Pugi write a project's delivery documents from a brief - customer brief, business requirements (BRD), product requirements (PRD), user flow, mockups, technical spec and test plan, plus a design spec and a clickable prototype in the console - then list, read, preview and revise them. Use when the user wants a PRD, BRD, spec, test plan or other planning documents for an app, or wants to read or change the plan Pugi wrote.
+description: Have Pugi write a project's delivery documents from a brief (customer brief, business requirements (BRD), product requirements (PRD), user flow, mockups, technical spec and test plan, plus a design spec and a clickable prototype in the console), then list, read, preview and revise them. Use when the user wants a PRD, BRD, spec, test plan or other planning documents for an app, or wants to read or change the plan Pugi wrote.
 license: MIT (see LICENSE.txt)
 compatibility: Needs @pugi/cli 1.0.0-alpha.246 or later, Node.js 18+, network access and a Pugi account (the user approves the sign-in in a browser). Writing documents uses the user's Pugi plan allowance.
 metadata:
@@ -19,8 +19,8 @@ metadata:
 | List, preview, read one | `pugi artifacts list`, `preview`, `show <kind>` | Available |
 | Revise the plan during a run | `pugi sdlc request-changes` (see `pugi-sdlc`) | Available |
 | The same documents with buttons | Delivery bundle view at https://app.pugi.io (**Generate bundle**, **Refresh**) | Available |
-| Edit a document's text directly | — | Not available: revise through the brief or a change request |
-| More agent tools | — | Coming soon |
+| Edit a document's text directly | None today | Not available: revise through the brief or a change request |
+| More agent tools | Not released yet | Coming soon |
 
 ## The documents
 

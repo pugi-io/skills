@@ -19,8 +19,8 @@ metadata:
 | Check publish status (`publish_status`) and credit (`get_balance`, `buy_credits_link`) | Pugi MCP server `https://api.pugi.io/api/agent/v1/mcp`, see "Pugi MCP server" below | Available, free |
 | Connect your own domain | Publish panel at https://app.pugi.io | Available; see https://pugi.io/pricing for the plans that include it |
 | Check the domain's DNS | `scripts/check-domain.sh` in this skill | Available |
-| Publish through the MCP server | — | Not available today |
-| More agent tools | — | Coming soon |
+| Publish through the MCP server | None today | Not available today |
+| More agent tools | Not released yet | Coming soon |
 
 Use only the available rows. Publishing itself goes through the CLI or the console.
 

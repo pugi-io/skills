@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 - 2026-10-24
+## 0.1.0 (2026-10-24)
 
 - First version, 11 skills: `pugi-build`, `pugi-sdlc`, `pugi-artifacts`, `pugi-design`, `pugi-start-from-template`, `pugi-logo`, `pugi-brand-to-site`, `pugi-security-check`, `pugi-fix-security`, `pugi-deploy-repo`, `pugi-publish`.
 - Claude Code plugin and marketplace; Agent Plugins root manifest with Codex settings, Codex fallback manifest and marketplace; Cursor plugin.

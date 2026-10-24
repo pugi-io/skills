@@ -1,6 +1,6 @@
 ---
 name: pugi-brand-to-site
-description: Turn a brand made on logo.pugi.io (logo, palette, fonts and brand brief) into a new website in the same brand on Pugi, in one handoff - the site uses the user's own logo files and colours instead of drawing new ones. Use when the user has a Pugi logo or brand kit and wants a website for it, or asks to build a site in their brand.
+description: Turn a brand made on logo.pugi.io (logo, palette, fonts and brand brief) into a new website in the same brand on Pugi, in one handoff. The site uses the user's own logo files and colours instead of drawing new ones. Use when the user has a Pugi logo or brand kit and wants a website for it, or asks to build a site in their brand.
 license: MIT (see LICENSE.txt)
 compatibility: A person or a browser-capable agent in the browser; needs a Pugi account (free sign-up). Building uses the plan allowance; publishing on a pugi.app address is included on every plan.
 metadata:
@@ -19,7 +19,7 @@ metadata:
 | **Build my website with this brand**: handoff to a new project | logo.pugi.io, then https://app.pugi.io | Available, sign-in required |
 | Edit the website brief, then **Build my website** | Console brief card | Available, every plan, within the plan's project limit |
 | Put the brand on an existing site | Console: "The logo on the site isn't yours?", then **Put my brand in** | Available |
-| More agent tools | — | Coming soon |
+| More agent tools | Not released yet | Coming soon |
 
 ## Rules
 

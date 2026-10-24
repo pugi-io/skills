@@ -1,7 +1,8 @@
-assets/icon.png is the Pugi logo, (c) 2026 Pugi Inc.
+assets/icon.png, assets/banner.png and assets/social-preview.png show the
+Pugi logo, (c) 2026 Pugi Inc.
 
-It is not covered by the MIT License in this repository. It is included so
-that plugin directories can show this plugin with its icon. You may
-redistribute it unchanged as part of this repository for that purpose.
-"Pugi" and the Pugi logo are trademarks of Pugi Inc. No other right to use
-them is granted.
+They are not covered by the MIT License in this repository. They are
+included so that plugin directories and this repository's page can show
+Pugi's mark. You may redistribute them unchanged as part of this repository
+for that purpose. "Pugi" and the Pugi logo are trademarks of Pugi Inc. No
+other right to use them is granted.

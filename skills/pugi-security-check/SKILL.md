@@ -1,6 +1,6 @@
 ---
 name: pugi-security-check
-description: Check a website or a code repository for security problems before launch - leaked API keys (Supabase service_role, Stripe, OpenAI, Anthropic, AWS, GitHub, Slack, Google, private keys), missing security headers, insecure cookies, public source maps, committed .env files. Use before publishing, when the user asks if their site or AI-built app (Lovable, Bolt, v0 or any other) is safe, or asks for a security check or audit.
+description: Check a website or a code repository for security problems before launch, such as leaked API keys (Supabase service_role, Stripe, OpenAI, Anthropic, AWS, GitHub, Slack, Google, private keys), missing security headers, insecure cookies, public source maps, committed .env files. Use before publishing, when the user asks if their site or AI-built app (Lovable, Bolt, v0 or any other) is safe, or asks for a security check or audit.
 license: MIT (see LICENSE.txt)
 compatibility: Needs Python 3.8+ (standard library only); git for the history check. URL mode needs network access.
 metadata:
@@ -21,8 +21,8 @@ metadata:
 | Scan of every build made with Pugi | Runs on every Pugi build before it can be published | Available, automatic |
 | Pentest of the running preview | Paid Pugi plans, the customer's own preview only | Available, see https://pugi.io/security/pentest |
 | Passive URL check as a tool (`scan_url`), graded A+ to F | Pugi MCP server `https://api.pugi.io/api/agent/v1/mcp`, see "Pugi MCP server" below | Available, free. It answered "temporarily unavailable" in a test on 2026-10-24; if so, use the script |
-| Repository scan as a tool | — | Not available today |
-| More agent tools | — | Coming soon |
+| Repository scan as a tool | None today | Not available today |
+| More agent tools | Not released yet | Coming soon |
 
 ## Rules
 

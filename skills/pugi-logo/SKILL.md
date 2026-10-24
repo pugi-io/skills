@@ -17,7 +17,7 @@ metadata:
 |---|---|---|
 | Logo concepts and a brand kit | https://logo.pugi.io (web page) | Available in a browser. Downloading the kit needs a free Pugi sign-in |
 | Website in the same brand | **Build my website with this brand**, see `pugi-brand-to-site` | Available on every plan; publishing on a pugi.app address is included on every plan |
-| More agent tools | — | Coming soon |
+| More agent tools | Not released yet | Coming soon |
 
 ## Steps
 

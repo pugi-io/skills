@@ -1,6 +1,6 @@
 ---
 name: pugi-design
-description: Use Pugi's Design mode to draw or change the design and clickable prototype of an app before or after it is built - point at an element and change its text, colours, font size, padding or margin, or describe the change in words; keep versions; apply the design to the app's source; save the prototype as a Pugi design file for a later Figma import (not a .fig file, and no public import plugin yet). Use when the user wants to see or change how their Pugi app looks or wants a prototype first.
+description: Use Pugi's Design mode to draw or change the design and clickable prototype of an app before or after it is built. Point at an element and change its text, colours, font size, padding or margin, or describe the change in words; keep versions; apply the design to the app's source; save the prototype as a Pugi design file for a later Figma import (not a .fig file, and no public import plugin yet). Use when the user wants to see or change how their Pugi app looks or wants a prototype first.
 license: MIT (see LICENSE.txt)
 compatibility: Design mode is in the Pugi console at https://app.pugi.io (a person in a browser, or a browser-capable agent). Editing needs the Founder plan or higher.
 metadata:
@@ -18,8 +18,8 @@ metadata:
 | Design tab, prototype, element editing, versions, Apply to app | Pugi console, https://app.pugi.io | Available, **Founder plan or higher** |
 | View a design read-only | Pugi console | Available on every plan |
 | Save the prototype as a Pugi design file (`.od-figma.json`) | **Download for Figma** on the Design tab and plan-approval screen | Available. Not a Figma file; see below |
-| Import that file into Figma | — | Not available today |
-| More agent tools | — | Coming soon |
+| Import that file into Figma | None today | Not available today |
+| More agent tools | Not released yet | Coming soon |
 
 There is no CLI command for Design mode. Guide the user through the console, or drive the browser if you can.
 

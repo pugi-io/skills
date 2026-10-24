@@ -1,0 +1,57 @@
+name: Bug report
+description: A skill did the wrong thing, failed, or its instructions are out of date.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Do not paste API keys, tokens or other secrets here. To report a vulnerability, email security@pugi.io instead of opening an issue.
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options:
+        - pugi-build
+        - pugi-sdlc
+        - pugi-artifacts
+        - pugi-design
+        - pugi-start-from-template
+        - pugi-logo
+        - pugi-brand-to-site
+        - pugi-security-check
+        - pugi-fix-security
+        - pugi-deploy-repo
+        - pugi-publish
+        - Plugin or install
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent
+      options:
+        - Claude Code
+        - Codex
+        - Cursor
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Skills version (from the release or plugin.json) and, for CLI skills, the output of `pugi --version`.
+      placeholder: skills 0.1.0, @pugi/cli 1.0.0-alpha.246
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you asked the agent to do, what it did, and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Relevant agent or command output, with secrets and private URLs removed.
+      render: text
