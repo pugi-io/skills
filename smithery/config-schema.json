@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "pugiAgentKey": {
+      "type": "string",
+      "title": "Pugi agent key",
+      "description": "Enter it as: Bearer pugi_agent_... Create a key with POST https://api.pugi.io/api/agent/v1/keys (see https://pugi.io/agents.md).",
+      "x-from": { "header": "pugi-agent-key" },
+      "x-to": { "header": "Authorization" }
+    }
+  },
+  "required": ["pugiAgentKey"]
+}

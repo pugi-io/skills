@@ -97,6 +97,16 @@ Which one to use: `pugi-build` starts a run; `pugi-sdlc` takes a run through its
 
 Each skill has a status table that marks every step as **Available**, **Not available today** or **Coming soon**. The skills use only what is live: the `pugi` CLI (`@pugi/cli` 1.0.0-alpha.246 or later, the version the commands were tested against) and pugi.io pages. More agent tools are coming; the skills tell the agent to use them only once they appear in its tool list or in https://pugi.io/llms.txt.
 
+## MCP server
+
+Pugi also runs a remote MCP server for agents. It is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.pugi/pugi) as `io.pugi/pugi`; its entry is [`server.json`](server.json).
+
+- Address: `https://api.pugi.io/api/agent/v1/mcp` (Streamable HTTP)
+- Auth: `Authorization: Bearer pugi_agent_...`. Create a key with `POST https://api.pugi.io/api/agent/v1/keys`.
+- Tools: `scan_url` (passive, read-only security check of a public website, graded A+ to F), `get_balance`, `buy_credits_link` (a card checkout link a person opens; it never charges by itself), `publish_status`.
+
+Details, prices and limits: [pugi.io/agents.md](https://pugi.io/agents.md).
+
 ## How it keeps you in control
 
 - **Asks before spending.** Every step that builds or spends allowance waits for your yes. The plan Pugi writes is yours to approve, and the build starts only after you approve it.
@@ -123,6 +133,8 @@ Each skill has a status table that marks every step as **Available**, **Not avai
 ├── .codex-plugin/plugin.json  Codex fallback manifest
 ├── .agents/plugins/marketplace.json
 ├── .cursor-plugin/plugin.json
+├── server.json              MCP Registry entry for the Pugi MCP server (io.pugi/pugi)
+├── smithery/                Smithery listing text and config schema
 ├── assets/                  icon, banner, social preview, NOTICE
 ├── skills/                  one folder per skill: SKILL.md, agents/openai.yaml, optional scripts/
 │   ├── pugi-build/  pugi-sdlc/  pugi-artifacts/  pugi-design/

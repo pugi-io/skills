@@ -1,0 +1,45 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.pugi/pugi",
+  "title": "Pugi",
+  "description": "Passive website security checks, credit balance, card top-up links and published app status.",
+  "version": "0.1.0",
+  "websiteUrl": "https://pugi.io/agents.md",
+  "repository": {
+    "url": "https://github.com/pugi-io/skills",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/pugi-io/skills/main/assets/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.pugi.io/api/agent/v1/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your Pugi agent key. Create one with POST https://api.pugi.io/api/agent/v1/keys (see https://pugi.io/agents.md).",
+          "value": "Bearer {pugi_agent_key}",
+          "isRequired": true,
+          "isSecret": true,
+          "variables": {
+            "pugi_agent_key": {
+              "description": "Pugi agent key, starts with pugi_agent_",
+              "placeholder": "pugi_agent_...",
+              "isRequired": true,
+              "isSecret": true,
+              "format": "string"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
