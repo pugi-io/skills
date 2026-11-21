@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Knowledge Sync"
+  short_description: "Reconcile workspace docs and Graphify with current evidence."
+  brand_color: "#3DA9FC"
+  default_prompt: "Refresh existing workspace documentation and Graphify from current GitHub, Jira, deployment, and repository evidence."
+policy:
+  allow_implicit_invocation: false

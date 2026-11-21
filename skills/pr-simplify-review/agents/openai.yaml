@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi PR Review"
+  short_description: "Review and simplify pull requests without changing intended behavior."
+  brand_color: "#3DA9FC"
+  default_prompt: "Review this pull request against its base, inspect the relevant source and feedback, fix actionable issues, and report scoped verification."
+policy:
+  allow_implicit_invocation: false

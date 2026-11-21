@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Task Implementation"
+  short_description: "Implement a scoped Pugi task and clean up the affected area."
+  brand_color: "#3DA9FC"
+  default_prompt: "Implement this scoped task, update owning documentation, add focused regression coverage, and run relevant checks."
+policy:
+  allow_implicit_invocation: false

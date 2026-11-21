@@ -20,7 +20,7 @@ Thanks for helping improve the Pugi skills.
    bash scripts/check.sh
    ```
 
-   It needs `uvx` and `gitleaks` installed.
+   Нужны Bash, git, Python 3, `uvx` и `gitleaks`. Проверка вызывает закреплённый `skills-ref` через `uvx` (может потребоваться сеть), проверяет manifest-файлы и ищет секреты в дереве и Git-истории. Отсутствие инструмента или невозможность выполнить проверку означает FAIL, а не успешный пропуск. Скрипт следует запускать явно: workflow GitHub Actions в этом репозитории отсутствует.
 
 6. Add a line to [CHANGELOG.md](CHANGELOG.md) for any change people will notice.
 

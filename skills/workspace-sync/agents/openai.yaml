@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pugi Workspace Sync"
+  short_description: "Synchronize workspace repositories, PRs, Jira, docs, and Graphify."
+  brand_color: "#3DA9FC"
+  default_prompt: "Run a complete, safe Pugi workspace recovery and sync; preserve local data and verify each requested surface."
+policy:
+  allow_implicit_invocation: false
