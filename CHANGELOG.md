@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added four workspace-maintenance skills: `workspace-sync`, `workspace-knowledge-sync`, `task-implementation-cleanup` and `pr-simplify-review`. They document internal repository, PR/Jira, cleanup and Graphify workflows; the Pugi product capability table remains unchanged.
 - `server.json`: the Pugi MCP server (`io.pugi/pugi`, remote Streamable HTTP at `https://api.pugi.io/api/agent/v1/mcp`) in the official MCP Registry, version 0.1.0.
 - `smithery/`: listing text and config schema for the Smithery listing.
 - README: MCP server section.

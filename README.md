@@ -38,14 +38,14 @@ Without the plugin, copy the skill folders into your skills directory:
 ```bash
 git clone https://github.com/pugi-io/skills pugi-skills
 mkdir -p ~/.claude/skills
-cp -r pugi-skills/skills/* ~/.claude/skills/        # or .claude/skills/ in a project
+cp -r pugi-skills/skills/pugi-*/ ~/.claude/skills/  # or .claude/skills/ in a project
 ```
 
 ### Codex
 
 ```bash
 git clone https://github.com/pugi-io/skills pugi-skills
-mkdir -p ~/.agents/skills && cp -r pugi-skills/skills/* ~/.agents/skills/
+mkdir -p ~/.agents/skills && cp -r pugi-skills/skills/pugi-*/ ~/.agents/skills/
 ```
 
 Codex reads skills from `.agents/skills/` in the repository (from the working directory up to the repository root) and from `~/.agents/skills/` for your user. To install one skill with the built-in installer:
@@ -60,13 +60,13 @@ The repository is also a plugin in the open Agent Plugins format (`plugin.json` 
 codex plugin marketplace add pugi-io/skills
 ```
 
-Restart Codex so it picks up new skills. Each skill has an `agents/openai.yaml` with its display name and default prompt.
+Restart Codex so it picks up new skills. Each skill has an `agents/openai.yaml` with its display name and default prompt. Workspace-maintenance skills are source files for the Pugi engineering workspace; install only the `pugi-*` skills for the product catalog.
 
 ### Cursor
 
 ```bash
 git clone https://github.com/pugi-io/skills pugi-skills
-mkdir -p ~/.cursor/skills && cp -r pugi-skills/skills/* ~/.cursor/skills/
+mkdir -p ~/.cursor/skills && cp -r pugi-skills/skills/pugi-*/ ~/.cursor/skills/
 ```
 
 Cursor loads Agent Skills from `.cursor/skills/` and `.agents/skills/` in a project, and from `~/.cursor/skills/` and `~/.agents/skills/` for your user. It also reads `.claude/skills/` and `.codex/skills/`.
@@ -95,17 +95,29 @@ Each skill is a folder with a `SKILL.md` (YAML front matter plus Markdown) and o
 
 Which one to use: `pugi-build` starts a run; `pugi-sdlc` takes a run through its gates to going live; `pugi-publish` and `pugi-deploy-repo` put code you already have online. Plans and limits: [pugi.io/pricing](https://pugi.io/pricing).
 
-Each skill has a status table that marks every step as **Available**, **Not available today** or **Coming soon**. The skills use only what is live: the `pugi` CLI (`@pugi/cli` 1.0.0-alpha.246 or later, the version the commands were tested against) and pugi.io pages. More agent tools are coming; the skills tell the agent to use them only once they appear in its tool list or in https://pugi.io/llms.txt.
+### Workspace maintenance workflows
+
+These four skills are for maintaining the Pugi engineering workspace, not for Pugi product tasks. Install the `pugi-*` folders above when you want only the product skills.
+
+- [`workspace-sync`](skills/workspace-sync/SKILL.md) — repository, pull request and Jira recovery.
+- [`workspace-knowledge-sync`](skills/workspace-knowledge-sync/SKILL.md) — documentation and Graphify reconciliation.
+- [`task-implementation-cleanup`](skills/task-implementation-cleanup/SKILL.md) — scoped implementation and cleanup.
+- [`pr-simplify-review`](skills/pr-simplify-review/SKILL.md) — pull request review and behavior-preserving simplification.
+
+Таблицы в `SKILL.md` содержат дату проверки: большинство сценариев проверялись 24.10.2026 против CLI `1.0.0-alpha.246`. Это не подтверждение текущей версии CLI или состояния прода. Перед вызовом MCP сверяйте фактический `tools/list` и `GET /api/agent/v1/pricing`; наличие инструкции само по себе не означает доступность инструмента.
 
 ## MCP server
 
-Pugi also runs a remote MCP server for agents. It is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.pugi/pugi) as `io.pugi/pugi`; its entry is [`server.json`](server.json).
+Pugi предоставляет удалённый MCP endpoint `https://api.pugi.io/api/agent/v1/mcp` (Streamable HTTP). Файл [`server.json`](server.json) содержит описание для MCP Registry; [`smithery/LISTING.md`](smithery/LISTING.md) — текст и настройки для Smithery. Наличие файлов не подтверждает публикацию в каталогах.
 
-- Address: `https://api.pugi.io/api/agent/v1/mcp` (Streamable HTTP)
-- Auth: `Authorization: Bearer pugi_agent_...`. Create a key with `POST https://api.pugi.io/api/agent/v1/keys`.
-- Tools: `scan_url` (passive, read-only security check of a public website, graded A+ to F), `get_balance`, `buy_credits_link` (a card checkout link a person opens; it never charges by itself), `publish_status`.
+Сверка 28.10.2026 с `pugi` @ `a5b05f6e2` (`apps/admin-api/src/agent-api/agent-{pricing,mcp.core,oauth.controller}.ts`):
 
-Details, prices and limits: [pugi.io/agents.md](https://pugi.io/agents.md).
+- Базовая таблица допускает `scan_url`, `make_logo`, `scan_repo`, `get_balance`, `buy_credits_link`, `publish_status`, `catalog_search`. Платные вызовы используют баланс или лимиты аккаунта; цену проверяют до запуска.
+- `build_site`, `build_app`, `edit`, `job_status`, `publish` зависят от `PUGI_AGENT_BUILDS` и готовности runtime. Наличие кода не означает, что они включены.
+- Сервер поддерживает агентский Bearer-ключ и OAuth; набор инструментов зависит от клиента и scopes. В ChatGPT инструменты покупки скрыты. Установка skills или plugin manifest сама по себе не подключает MCP и не выдаёт учётные данные.
+- Публичные pricing и `tools/list` при этой сверке вернули HTTP 403. Текущий список на проде, OAuth-вход и публикация в каталогах не подтверждены. Старые таблицы skills не следует использовать вместо ответа сервера.
+
+Документация для подключения: [pugi.io/agents.md](https://pugi.io/agents.md). Создание ключа `POST /api/agent/v1/keys` меняет аккаунт: выполняйте его только по разрешению пользователя и сохраняйте ключ вне репозитория.
 
 ## How it keeps you in control
 
@@ -141,7 +153,11 @@ Details, prices and limits: [pugi.io/agents.md](https://pugi.io/agents.md).
 │   ├── pugi-start-from-template/  pugi-logo/  pugi-brand-to-site/
 │   ├── pugi-security-check/     scripts/precheck.py
 │   ├── pugi-fix-security/  pugi-deploy-repo/
-│   └── pugi-publish/            scripts/check-domain.sh
+│   ├── pugi-publish/            scripts/check-domain.sh
+│   ├── workspace-sync/          internal workspace recovery
+│   ├── workspace-knowledge-sync/ internal docs and Graphify sync
+│   ├── task-implementation-cleanup/ scoped implementation cleanup
+│   └── pr-simplify-review/      pull request review workflow
 └── scripts/check.sh         Validates front matter and scans this repo for secrets
 ```
 

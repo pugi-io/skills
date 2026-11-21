@@ -1,12 +1,14 @@
 # Pugi on Smithery
 
-Text and settings for the Smithery listing of the Pugi MCP server.
+Текст и настройки для публикации Pugi MCP в Smithery. Это локальный черновик, не подтверждение опубликованной карточки.
+
+Сверка кода 28.10.2026: `pugi` @ `a5b05f6e2`, модуль `apps/admin-api/src/agent-api/`. Публичные pricing и `tools/list` вернули 403; доступность на проде и актуальные цены нужно подтвердить перед публикацией.
 
 ## Server
 
 - URL: `https://api.pugi.io/api/agent/v1/mcp`
 - Transport: Streamable HTTP, JSON responses
-- Auth: `Authorization: Bearer pugi_agent_...` (no OAuth)
+- Для этой конфигурации: `Authorization: Bearer pugi_agent_...`. Сервер также реализует OAuth; эта схема описывает только ввод агентского ключа.
 - Config schema: [`config-schema.json`](config-schema.json)
 
 ## Listing
@@ -19,14 +21,9 @@ Short description:
 
 Long description:
 
-> Pugi is an AI product team that builds, checks and publishes websites and apps. This MCP server gives agents four tools today:
+> Pugi проверяет сайты и публичные репозитории, создаёт логотипы и ищет стартеры. В базовой таблице кода включены `scan_url`, `make_logo`, `scan_repo`, `get_balance`, `buy_credits_link`, `publish_status`, `catalog_search`. Фактический набор зависит от клиента, scopes и конфигурации сервера; цены и лимиты сверяются через `/api/agent/v1/pricing`. Сборка, редактирование и публикация дополнительно требуют включённого `PUGI_AGENT_BUILDS` и готового runtime.
 >
-> - `scan_url`: a passive, read-only security check of a public website, graded A+ to F. Free, 10 a day per key. It reads only what a browser receives. It is not a pentest and does not prove a site is secure.
-> - `get_balance`: credit balance, today's spend, the daily cap and the price list. Free.
-> - `buy_credits_link`: a card checkout link a person opens to add credit. It never charges by itself. Free.
-> - `publish_status`: status and address of the apps this account has published. Free.
->
-> Create a key with `POST https://api.pugi.io/api/agent/v1/keys`. A new key comes with $0.50 of free credit. Each key has a rate limit and a daily spend cap.
+> `buy_credits_link` возвращает ссылку на оплату, которую открывает человек. Создание ключа и платные вызовы требуют разрешения пользователя.
 
 Links:
 
@@ -43,6 +40,8 @@ Links:
 Categories: Security, Developer tools.
 
 ## Steps
+
+Публикация, создание и отзыв тестового ключа меняют внешние ресурсы и выполняются только по явному разрешению владельца.
 
 1. Sign in at https://smithery.ai with GitHub.
 2. Open https://smithery.ai/new and choose to publish by URL.
