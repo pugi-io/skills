@@ -1,0 +1,7 @@
+interface:
+  display_name: "Start Pugi Locally"
+  short_description: "Simple local startup prompts for Pugi apps"
+  brand_color: "#3DA9FC"
+  default_prompt: "Help me open a Pugi app locally. I am not technical."
+policy:
+  allow_implicit_invocation: true
