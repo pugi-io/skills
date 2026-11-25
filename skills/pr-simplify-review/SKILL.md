@@ -1,13 +1,13 @@
 ---
 name: pr-simplify-review
-description: Review a Pugi pull request or proposed diff for correctness and maintainability, then simplify the changed code without altering intended behavior.
+description: Optionally review or simplify a Pugi pull request when requested or useful; peer review and approval are not default merge gates.
 ---
 
-# PR simplify and code review
+# PR simplification and optional code review
 
-Use this workflow when preparing, reviewing, or updating a pull request. Review the full requested diff and its relevant source context.
+Use this workflow when the user requests a code review or when a review would materially help the task. Preparing or updating a pull request does not require a separate peer review or GitHub approval. Merge readiness follows the shared PR policy: address unresolved concrete colleague requests, pass the relevant local tests, lint and typecheck, and require configured CI checks to be green (no configured CI/checks is acceptable).
 
-## Review
+## Optional review
 
 - Establish the comparison base and read the PR description, linked task/spec, repository instructions, and relevant existing implementation.
 - Check behavior against acceptance criteria separately from code quality. Look for regressions, missing error/boundary handling, unsafe input or authorization assumptions, type holes, accessibility issues, and missing focused tests.

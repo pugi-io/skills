@@ -1,0 +1,1 @@
+This repository may be checked out inside the Pugi workspace. When the workspace root is available, read its shared policy at `../AGENTS.md`; in a standalone clone, follow this repository's guidance and current project files. Preserve existing local changes.
